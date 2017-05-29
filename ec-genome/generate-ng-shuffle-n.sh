@@ -19,6 +19,6 @@ for x in `seq 1 1 $iter`;
   cd ..
   load-graph.py ng-shuffle-$len/out-$len-$x.ng tmp$len.fna -M 1e9 -k 31 --no-build-tagset
   python ../measure-reads.py ng-shuffle-$len/out-$len-$x.ng reads-noerr/$read
-  mv $read.ng.hdn.csv ng-shuffle-$len
+  mv out-$len-$x.ng.hdn.csv ng-shuffle-$len
   rm tmp$len.fna
 done

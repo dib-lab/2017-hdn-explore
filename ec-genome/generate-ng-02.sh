@@ -2,8 +2,7 @@
 
 # generate short reads from e. coli genomes with error of 0.01; length of 100
 
-base=$(head -n 1 sample-20-reads.txt)
-
+base1=$(head -n 1 sample-20-reads.txt)
 for fna in $(tail -n +2 sample-20-reads.txt)
   do
   cat reads-noerr/$base reads-noerr/$fna > tmp.fna
